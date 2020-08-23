@@ -1,3 +1,3 @@
 # leetcode-javascript
 
-每日一算法。
+每日一算法～
