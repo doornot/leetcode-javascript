@@ -79,4 +79,6 @@ let swap = (arr, i, j) => {
 
 findKthLargest2([1,2,3,4,5], 2)
 
-// 参考： https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/javascriptsi-chong-fang-shi-jie-topkwen-ti-by-user/
+// 参考
+// 作者：user7746o
+// 链接：https://leetcode-cn.com/problems/kth-largest-element-in-an-array/solution/javascriptsi-chong-fang-shi-jie-topkwen-ti-by-user/

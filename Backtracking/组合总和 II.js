@@ -30,4 +30,6 @@ const combinationSum2 = (candidates, target) => {
   return res;
 };
 
-// 参考： https://leetcode-cn.com/problems/combination-sum-ii/solution/man-tan-wo-li-jie-de-hui-su-chang-wen-shou-hua-tu-/
+// 参考
+// 作者：xiao_ben_zhu
+// 链接：https://leetcode-cn.com/problems/combination-sum-ii/solution/man-tan-wo-li-jie-de-hui-su-chang-wen-shou-hua-tu-/
