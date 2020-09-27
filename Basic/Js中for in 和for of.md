@@ -42,6 +42,11 @@ var a = ["a", "b", "c"];
 for(var value of a){
   console.log("for of: " + value);
 }
+
+var b = 'hello';
+for(let char of b) {
+  console.log(char);
+}
 ```
 
 * 这个方法是最简洁的，并且修复了 for-in 循环的所有缺点，与 forEach()不同的是，它可以正确的响应 break、contine、return 语句。
@@ -69,7 +74,7 @@ for (var prop in student) {
 
 ### 5、结论：javascript 中 for of 和 for in 的区别
 
-- 推荐在循环对象属性的时候，使用 for...in,在遍历数组的时候的时候使用 for...of。
+- 推荐在循环对象属性的时候，使用 for...in，在遍历数组、字符串的时候使用 for...of。
 
 - for...in 循环出的是 key，for...of 循环出的是 value
 
