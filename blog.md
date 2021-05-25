@@ -5,3 +5,5 @@
 - 前端瓶子君-github: https://github.com/sisterAn/JavaScript-Algorithms
 
 - 前端瓶子君-个人站点: https://www.pzijun.cn/algorithms/
+
+- labuladong 的算法小抄: https://labuladong.gitbook.io/algo/
