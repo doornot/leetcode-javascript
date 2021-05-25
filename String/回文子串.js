@@ -1,7 +1,8 @@
 /**
- * 题目：回文子串
+ * 题目: 回文子串
  * 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
  * 具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。
+ * leetcode: https://leetcode-cn.com/problems/palindromic-substrings/
  */
 
 /**
@@ -41,6 +42,12 @@ function isPalindrome(str) {
 
 /**
  * @方法二 动态规划
+ * 一个字符串是回文串，它的首尾字符相同，且剩余子串也是一个回文串。
+ * 其中，剩余子串是否为回文串，就是规模小一点的子问题，它的结果影响大问题的结果。
+ * 一个子串由两端的 i 、j 指针确定，就是描述子问题的变量，子串 s[i...j] （ dp[i][j] ） 是否是回文串，就是子问题。
+ * i === j： dp[i][j]=true
+ * j - i == 1 && s[i] == s[j]： dp[i][j] = true
+ * j - i > 1 && s[i] == s[j] && dp[i + 1][j - 1]： dp[i][j] = true
  * @str string
  * @return number
  */

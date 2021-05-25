@@ -1,38 +1,42 @@
 /**
- * 方法一：判断字符串是否回文
+ * 题目: 最长回文子串
+ * 给定一个字符串 s，找到 s 中最长的回文子串。
+ * leetcode: https://leetcode-cn.com/problems/longest-palindromic-substring/
  */
-function isPlalindrome1(str) {
-  if (typeof str !== 'string') return false
-  return str.split('').reverse().join('') === str
-}
 
 /**
- * 方法二：判断字符串是否回文
+ * 方法一: 动态规划
  */
-function isPlalindrome2(str) {
-  if (typeof str !== 'string') return false
-  let i = 0
-  let j = str.length - 1
-  while (i < j) {
-    if (str.charAt(i) !== str.charAt(j)) return false
-    i++
-    j--
+const longestPalindrome1 = (str) => {
+  const len = str.length
+  if (len < 2) return str
+  let res = str[0],
+    dp = new Array(len).fill(new Array(len).fill(false))
+  for (let j = 1; j < len; j++) {
+    for (let i = 0; i <= j; i++) {
+      if (j === i) {
+        dp[i][j] = true
+      } else if (j - i === 1 && str[i] === str[j]) {
+        dp[i][j] = true
+      } else if (str[i] === str[j] && dp[i + 1][j - 1]) {
+        dp[i][j] = true
+      }
+      // 获取当前最长回文子串
+      if (dp[i][j] && j - i + 1 > res.length) {
+        res = str.substring(i, j + 1)
+      }
+    }
   }
-  return true
+
+  return res
 }
 
-console.log(isPlalindrome1('hello'))
-console.log(isPlalindrome1('12321'))
-console.log(isPlalindrome2('hello'))
-console.log(isPlalindrome2('12321'))
-
 /**
- * charAt
- * charAt() 方法从一个字符串中返回指定的字符。
- * 语法 str.charAt(index)
- * 参数 index 一个介于0 和字符串长度减1之间的整数。默认为0
- * 示例如下
+ * 方法二：遍历
  */
-const a = 'hello'
-a.charAt() // 'h'
-a.charAt(1) // 'e'
+function longestPalindrome2(str) {}
+
+console.log(longestPalindrome1('hello')) // ll
+// console.log(longestPalindrome2('hello'))
+console.log(longestPalindrome1('12321')) // 12321
+// console.log(longestPalindrome2('12321'))
