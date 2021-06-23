@@ -24,6 +24,7 @@ const removeDuplicates = (str) => {
   return stack.join('')
 }
 
+console.log(removeDuplicates('aaa')) // a
 console.log(removeDuplicates('abbaca')) // ca
 
 /**
