@@ -39,6 +39,7 @@ const preorderTraversal2 = (root) => {
   while (stack.length) {
     const currentNode = stack.pop()
     result.push(currentNode.val)
+    // 先打印左子树，然后右子树。所以先加入栈的是右子树，然后左子树。
     if (currentNode.right) {
       stack.push(currentNode.right)
     }
